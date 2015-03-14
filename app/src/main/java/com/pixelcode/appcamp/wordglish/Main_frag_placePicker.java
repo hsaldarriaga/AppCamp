@@ -21,6 +21,12 @@ public class Main_frag_placePicker extends Fragment {
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         ScreenWidth = displaymetrics.widthPixels;
         ScreenHeight = displaymetrics.heightPixels;
-        return inflater.inflate(R.layout.fragment_placepicker, container, false);
+        View v = inflater.inflate(R.layout.fragment_placepicker, container, false);
+        Initialize(v);
+        return v;
+    }
+
+    private void Initialize(View v) {
+
     }
 }
