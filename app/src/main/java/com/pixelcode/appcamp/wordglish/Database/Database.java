@@ -23,11 +23,13 @@ public class Database extends SQLiteOpenHelper {
     public static final String Tabla_Sinonimo = "Sinonimo";
     public static final String Sindid = "Sinid";
     public static final String Sindidpalabra = "idpalabra";
+    public static final String SinCategoria = "idpalabra";
 
     //Tabla Antonimo
     public static final String Tabla_Antonimo = "Antonimo";
     public static final String Antid = "Antid";
     public static final String Antidpalabra = "idpralabra";
+    public static final String AntCategoria = "idpalabra";
 
     //Tabla Relacion
     public static final String Tabla_Relacion = "Relacion";
@@ -49,13 +51,15 @@ public class Database extends SQLiteOpenHelper {
                               + Palid + " integer primary key," + Palpalabra + " integer"+
                                 ");" +
                                 "CREATE TABLE " + Tabla_Sinonimo + "("
-                                + Sindid + " integer primary key," + Sindidpalabra + " integer"+
+                                + Sindid + " integer primary key," + Sindidpalabra + " integer,"
+                                + SinCategoria + " integer"+
                                  ");"+
-                                "CREATE TABLE " + Tabla_Palabra + "("
-                                + Antid + " integer primary key," + Antidpalabra + " integer"+
+                                "CREATE TABLE " + Tabla_Antonimo + "("
+                                + Antid + " integer primary key," + Antidpalabra + " integer,"
+                                + AntCategoria + " integer"+
                                    ");" +
                                 "CREATE TABLE " + Tabla_Relacion + "("
-                                 + Reltid + " integer primary key," + Relcategoria + " text,"+
+                                 + Reltid + " integer primary key," + Relcategoria + " integer,"+
                                   Relnivel + "integer," + Relpalabras + " text,"+
                                   RelRespuesta + "text" +
                                     ");";
