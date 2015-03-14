@@ -1,19 +1,19 @@
 package com.pixelcode.appcamp.wordglish;
 
+import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     private FragmentManager fragmentManager;
-
+    private Main_frag_how how;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void howto_click(View v)
     {
-        Main_frag_how how = new Main_frag_how();
+        how = new Main_frag_how();
         fragmentManager.beginTransaction()
                 .replace(R.id.main_container, how)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
@@ -42,5 +42,16 @@ public class MainActivity extends ActionBarActivity {
                 .replace(R.id.main_container, place)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit();
+    }
+
+    public void lestplay_how_click(View v)
+    {
+        if (how.index == how.size - 1) {
+            Main_frag_placePicker place = new Main_frag_placePicker();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.main_container, place)
+                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                    .commit();
+        }
     }
 }
