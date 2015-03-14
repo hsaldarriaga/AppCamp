@@ -59,11 +59,11 @@ public class Database extends SQLiteOpenHelper {
                                 + AntCategoria + " integer"+
                                    ");" +
                                 "CREATE TABLE " + Tabla_Relacion + "("
-                                 + Reltid + " integer primary key," + Relcategoria + " integer,"+
+                                 + Reltid + " integer primary key increment," + Relcategoria + " integer,"+
                                   Relnivel + "integer," + Relpalabras + " text,"+
                                   RelRespuesta + "text" +
                                     ");";
-        Log.d(TAG,"oncreate" + CREATE_TABLE);
+        Log.d(TAG,"onCreate" + CREATE_TABLE);
 
         try {
             if (db.isOpen()) {
