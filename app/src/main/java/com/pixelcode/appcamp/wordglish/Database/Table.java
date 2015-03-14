@@ -1,4 +1,4 @@
-package com.pixelcode.appcamp.wordglish;
+package com.pixelcode.appcamp.wordglish.Database;
 
 /**
  * Created by Ricardo on 14/03/2015.
