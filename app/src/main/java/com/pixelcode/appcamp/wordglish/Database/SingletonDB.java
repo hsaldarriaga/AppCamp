@@ -30,13 +30,29 @@ public class SingletonDB {
     public void Rellenar()
     {
         SQLiteDatabase db = database.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(Database.Palpalabra,"Tan");
-        db.insert(Database.Tabla_Palabra,null,values);
 
-        values = new ContentValues();
-        values.put(Database.Tabla_Sinonimo,"Tan");
-        db.insert(Database.Tabla_Palabra,null,values);
+        //Playa
+        ContentValues values = new ContentValues(); values.put(Database.Palid,"1");values.put(Database.Palpalabra,"Umbrella");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"2");values.put(Database.Palpalabra,"Fish");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"3");values.put(Database.Palpalabra,"Vessel");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"4");values.put(Database.Palpalabra,"Grit");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"5");values.put(Database.Palpalabra,"SalesClerk");db.insert(Database.Tabla_Palabra,null,values);
+
+        //Desierto
+        values = new ContentValues(); values.put(Database.Palid,"6");values.put(Database.Palpalabra,"Serpent");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"7");values.put(Database.Palpalabra,"Mirage");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"8");values.put(Database.Palpalabra,"Palm");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"9");values.put(Database.Palpalabra,"Camel");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"10");values.put(Database.Palpalabra,"Overcast");db.insert(Database.Tabla_Palabra,null,values);
+
+        //Montaña
+        values = new ContentValues(); values.put(Database.Palid,"11");values.put(Database.Palpalabra,"Overcoat");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"12");values.put(Database.Palpalabra,"Peak");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"13");values.put(Database.Palpalabra,"Cable Railway");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"14");values.put(Database.Palpalabra,"Landsalide");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid,"15");values.put(Database.Palpalabra,"Skier");db.insert(Database.Tabla_Palabra,null,values);
+
+
 
         //values.put();
 
