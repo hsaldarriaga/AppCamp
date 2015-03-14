@@ -70,7 +70,7 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Palid, 0); values.put(Database.Palpalabra,"Candyfloss"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 0); values.put(Database.Palpalabra,"Target Shooting"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 0); values.put(Database.Palpalabra,"Toffee"); db.insert(Database.Tabla_Palabra,null,values);
-
+        
         //values.put();
 
         db.close();

@@ -20,6 +20,10 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name=".RelationActivity"
+            android:label="@string/title_activity_relation" >
+        </activity>
     </application>
 
 </manifest>

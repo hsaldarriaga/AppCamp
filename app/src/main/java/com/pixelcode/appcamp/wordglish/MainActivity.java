@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Main_frag_presentation pres = new Main_frag_presentation();
         fragmentTransaction.add(R.id.main_container, pres);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 
@@ -53,5 +54,12 @@ public class MainActivity extends Activity {
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                     .commit();
         }
+    }
+
+    public void Next_click(View v)
+    {
+        Intent intent = new Intent(this, RelationActivity.class);
+        intent.putExtra("categoria",0);
+        startActivity(intent);
     }
 }
