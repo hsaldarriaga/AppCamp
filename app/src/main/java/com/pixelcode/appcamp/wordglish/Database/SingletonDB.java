@@ -30,6 +30,6 @@ public class SingletonDB {
     {
         SQLiteDatabase db = database.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put();
+        //values.put();
     }
 }
