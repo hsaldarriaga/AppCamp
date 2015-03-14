@@ -23,21 +23,18 @@ public class Database extends SQLiteOpenHelper {
     public static final String Tabla_Sinonimo = "Sinonimo";
     public static final String Sindid = "Sinid";
     public static final String Sindidpalabra = "idpalabra";
-    public static final String SinCategoria = "idpalabra";
+    public static final String SinIDS = "idAnts";
 
     //Tabla Antonimo
     public static final String Tabla_Antonimo = "Antonimo";
     public static final String Antid = "Antid";
     public static final String Antidpalabra = "idpralabra";
-    public static final String AntCategoria = "idpalabra";
+    public static final String AntIDs = "idAnts";
 
-    //Tabla Relacion
-    public static final String Tabla_Relacion = "Relacion";
-    public static final String Reltid = "idRelacion";
-    public static final String Relcategoria = "Cateogira";
-    public static final String Relnivel = "Nivel";
-    public static final String Relpalabras= "Palabras";
-    public static final String RelRespuesta = "PalabraRespuesta";
+    //Tabla Categoria
+    public static final String Tabla_Categoria = "Categoria";
+    public static final String Catid = "IdCategoria";
+    public static final String Catcategoria = "Categoira";
 
     public Database(Context context) {
         super(context, BDname, null, Verison);
@@ -48,20 +45,18 @@ public class Database extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         String CREATE_TABLE = "CREATE TABLE " + Tabla_Palabra + "("
-                              + Palid + " integer primary key," + Palpalabra + " integer"+
+                              + Palid + " integer primary key," + Palpalabra + " text"+
                                 ");" +
                                 "CREATE TABLE " + Tabla_Sinonimo + "("
                                 + Sindid + " integer primary key," + Sindidpalabra + " integer,"
-                                + SinCategoria + " integer"+
+                                + SinIDS + " integer"+
                                  ");"+
                                 "CREATE TABLE " + Tabla_Antonimo + "("
                                 + Antid + " integer primary key," + Antidpalabra + " integer,"
-                                + AntCategoria + " integer"+
+                                + AntIDs + " integer"+
                                    ");" +
-                                "CREATE TABLE " + Tabla_Relacion + "("
-                                 + Reltid + " integer primary key increment," + Relcategoria + " integer,"+
-                                  Relnivel + "integer," + Relpalabras + " text,"+
-                                  RelRespuesta + "text" +
+                                "CREATE TABLE " + Tabla_Categoria + "("
+                                 + Catid + " integer primary key increment," + Catcategoria + " integer,"+
                                     ");";
         Log.d(TAG,"onCreate" + CREATE_TABLE);
 
