@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.pixelcode.appcamp.wordglish.Database.Database;
+import com.pixelcode.appcamp.wordglish.Database.SingletonDB;
 
 
 public class presentation extends ActionBarActivity {
@@ -17,6 +18,8 @@ public class presentation extends ActionBarActivity {
         setContentView(R.layout.activity_presentation);
         Thread thread = new Thread(new ThreadCreator(this));
         thread.start();
+
+
 
     }
 }

@@ -34,7 +34,7 @@ public class Database extends SQLiteOpenHelper {
     //Tabla Categoria
     public static final String Tabla_Categoria = "Categoria";
     public static final String Catid = "IdCategoria";
-    public static final String Catcategoria = "Categoira";
+    public static final String Catcategoria = "Categorias";
 
     public Database(Context context) {
         super(context, BDname, null, Verison);
@@ -44,22 +44,28 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String CREATE_TABLE = " CREATE TABLE " + Tabla_Palabra + "("
+        String CREATE_PAL = " CREATE TABLE " + Tabla_Palabra + "("
                               + Palid + " integer primary key," + Palpalabra + " text"+
-                                ")" +
-                                " CREATE TABLE " + Tabla_Sinonimo + "("
+                                ")";
+
+        String CREATE_SYM =    " CREATE TABLE " + Tabla_Sinonimo + "("
                                 + Sindid + " integer primary key," + Sindidpalabra + " integer,"
                                 + SinIDS + " text"+
-                                 ")"+
-                                " CREATE TABLE " + Tabla_Antonimo + "("
+                                 ")";
+        String CREATE_ANT =     " CREATE TABLE " + Tabla_Antonimo + "("
                                 + Antid + " integer primary key," + Antidpalabra + " integer,"
                                 + AntIDs + " text"+
-                                   ")" +
-                                " CREATE TABLE " + Tabla_Categoria + "("
+                                   ")";
+        String CREATE_CAT =     " CREATE TABLE " + Tabla_Categoria + "("
                                  + Catid + " integer primary key," + Catcategoria + " integer"+
-                                    ");";
-        Log.d(TAG,"onCreate" + CREATE_TABLE);
+                                    ")";
+        //Log.d(TAG,"onCreate" + CREATE_TABLE);
+        db.execSQL(CREATE_PAL);
+        db.execSQL(CREATE_SYM);
+        db.execSQL(CREATE_ANT);
+        db.execSQL(CREATE_CAT);
 
+/*
         try {
             if (db.isOpen()) {
                 db.execSQL(CREATE_TABLE);
@@ -69,7 +75,7 @@ public class Database extends SQLiteOpenHelper {
             return;
         } finally {
         }
-
+*/
 
 
     }
