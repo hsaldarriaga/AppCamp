@@ -234,22 +234,27 @@ public class SingletonDB {
     public String [] getWordsFromCategory(int categoria, int count)
     {
         SQLiteDatabase db = database.getReadableDatabase();
-        Cursor cc = db.rawQuery("SELECT " + Database.Palpalabra + "," + Database.Palid + " FROM " + Database.Tabla_Palabra + " NATURAL JOIN " + Database.Tabla_Categoria + " WHERE " + Database.Catcategoria + "=" + categoria + " AND " + Database.Palid + "=" + Database.Catid, null);
-        cc.moveToNext();
+        Cursor cc = db.rawQuery("SELECT " + Database.Tabla_Palabra + "." + Database.Palpalabra + "," + Database.Tabla_Palabra + "." + Database.Palid + " FROM " + Database.Tabla_Palabra + " NATURAL JOIN " + Database.Tabla_Categoria + " WHERE " + Database.Catcategoria + "=" + categoria + " AND " + Database.Tabla_Palabra + "." +Database.Palid + "=" + Database.Tabla_Categoria + "." + Database.Catid, null);
+        cc.moveToFirst();
+        int size = cc.getCount();
+        cc.moveToFirst();
         int j = 0;
         ArrayList<Integer> valores = new ArrayList<>();
         String [] resultado = new String[count];
         Random m = new Random();
         while (j<count) {
-            int value = m.nextInt(cc.getCount());
+            int value = m.nextInt(size-1);
             while (IsIn(value, valores)) {
-                m.nextInt(cc.getCount());
+                m.nextInt(size-1);
             }
+            valores.add(value);
             cc.move(value);
-            resultado[j] = cc.getInt(0) + "," + cc.getString(1);
+            resultado[j] = cc.getInt(1) + "," + cc.getString(0);
+            cc.moveToFirst();
             j++;
         }
         cc.close();
+        db.close();
         return resultado;
     }
 
