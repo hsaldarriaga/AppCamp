@@ -42,4 +42,10 @@ public class MainActivity extends Activity {
                 .addToBackStack(null)
                 .commit();
     }
+
+    public void StartGame(View v) {
+        Intent inten = new Intent(this, RelationActivity.class);
+        inten.putExtra("categoria",Integer.parseInt(v.getTag().toString()));
+        startActivity(inten);
+    }
 }

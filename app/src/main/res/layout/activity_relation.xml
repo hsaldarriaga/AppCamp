@@ -6,11 +6,4 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.pixelcode.appcamp.wordglish.RelationActivity">
 
-    <ListView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/List_Relation"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 </RelativeLayout>

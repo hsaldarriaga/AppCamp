@@ -1,38 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/img_background" />
+    android:layout_height="match_parent"
+    android:background="#91CEE8"
+    android:id="@+id/pre_container">
 
     <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:id="@+id/img_how"
-        android:onClick="howto_click"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/img_play"
-        android:layout_alignStart="@+id/img_play"
-        android:layout_marginBottom="60dp" />
-
-    <ImageButton
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:id="@+id/img_play"
-        android:layout_above="@+id/img_how"
-        android:onClick="letsplay_click"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="frag_presntation"
-        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pre_back_anima"
+        android:background="@drawable/pres_background"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="400px"
+        android:layout_marginBottom="-400px" />
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="@drawable/pre_button_play"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:onClick="letsplay_click"
+        android:layout_above="@+id/pre_how"
+        android:layout_marginBottom="50dp" />
+
+    <ImageButton
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:id="@+id/pre_how"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:onClick="howto_click"
+        android:background="@drawable/pre_button_how" />
+
+    <ImageButton
+        android:layout_width="110dp"
+        android:layout_height="150dp"
+        android:id="@+id/pre_globe1"
+        android:background="@drawable/pre_globe1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="-110dp" />
+
+    <ImageButton
+        android:layout_width="110dp"
+        android:layout_height="150dp"
+        android:id="@+id/pre_globe2"
+        android:background="@drawable/pre_globe2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="180dp"
+        android:layout_marginRight="-110dp" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/cloud1"
+        android:background="@drawable/pre_cloud1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="-100dp"
+        android:layout_marginTop="80dp" />
+
+    <ImageButton
+        android:layout_width="150dp"
+        android:layout_height="75dp"
+        android:id="@+id/cloud2"
+        android:background="@drawable/pre_cloud2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="-150dp" />
+
+    <ImageButton
+        android:layout_width="110dp"
+        android:layout_height="60dp"
+        android:id="@+id/cloud3"
+        android:background="@drawable/pre_cloud3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="-110dp" />
 </RelativeLayout>

@@ -9,5 +9,7 @@
         android:text="Place Picker"
         android:id="@+id/textView"
         android:clickable="true"
+        android:onClick="StartGame"
+        android:tag="0"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

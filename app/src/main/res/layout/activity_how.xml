@@ -19,7 +19,8 @@
             android:outAnimation="@android:anim/slide_out_right"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp" />
     </RelativeLayout>
 
     <LinearLayout
