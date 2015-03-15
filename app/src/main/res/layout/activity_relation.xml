@@ -1,35 +1,40 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pixelcode.appcamp.wordglish.RelationActivity">
+    tools:context="com.pixelcode.appcamp.wordglish.RelationActivity"
+    android:id="@+id/rel_all_container">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:id="@+id/rel_header">
 
         <ImageButton
-            android:layout_width="0dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:id="@+id/imageButton2"
-            android:layout_weight="2" />
+            android:background="@drawable/menu" />
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/progressBar"
+            android:id="@+id/timebar"
             android:layout_weight="6" />
 
         <ImageButton
-            android:layout_width="0dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:id="@+id/imageButton4"
-            android:layout_weight="2" />
+            android:background="@drawable/time" />
     </LinearLayout>
 
     <RelativeLayout
@@ -37,14 +42,15 @@
         android:layout_height="fill_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/rel_header">
+        android:layout_below="@+id/rel_header"
+        android:id="@+id/rel_word_cotainer">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton5"
             android:text="ITEM X"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:layout_below="@+id/imageButton6"
             android:layout_alignLeft="@+id/imageButton6"
             android:layout_alignStart="@+id/imageButton6"
@@ -55,7 +61,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton6"
             android:text="ITEM X"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:layout_below="@+id/imageButton7"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp" />
@@ -65,7 +71,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton7"
             android:text="ITEM X"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:layout_below="@+id/imageButton8"
             android:layout_alignLeft="@+id/imageButton6"
             android:layout_alignStart="@+id/imageButton6"
@@ -76,7 +82,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton8"
             android:text="ITEM X"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:layout_below="@+id/imageButton9"
             android:layout_alignLeft="@+id/imageButton7"
             android:layout_alignStart="@+id/imageButton7"
@@ -87,7 +93,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton9"
             android:text="ITEM X"
-            android:textSize="40dp"
+            android:textSize="30dp"
             android:layout_alignParentTop="true"
             android:layout_alignLeft="@+id/imageButton8"
             android:layout_alignStart="@+id/imageButton8"

@@ -9,18 +9,19 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/how_imageView">
+        android:layout_above="@+id/how_imageView"
+        android:layout_marginBottom="10dp">
 
         <ImageSwitcher
             android:layout_width="fill_parent"
-            android:layout_height="280dp"
+            android:layout_height="fill_parent"
             android:id="@+id/how_ImageSwitcher"
             android:inAnimation="@android:anim/slide_in_left"
             android:outAnimation="@android:anim/slide_out_right"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20dp" />
+            android:layout_alignParentTop="true"
+            android:animateFirstView="false" />
     </RelativeLayout>
 
     <LinearLayout

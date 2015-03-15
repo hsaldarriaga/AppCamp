@@ -37,7 +37,6 @@ public class SingletonDB {
     public void Rellenar()
     {
         db = database.getWritableDatabase();
-        db.beginTransaction();
         //Playa
         ContentValues values = new ContentValues();values.put(Database.Palid,1);values.put(Database.Palpalabra,"Umbrella");db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 2);values.put(Database.Palpalabra,"Fish");db.insert(Database.Tabla_Palabra,null,values);
@@ -168,12 +167,11 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Catid, 40);values.put(Database.Catcategoria,7);db.insert(Database.Tabla_Categoria,null,values);
         values = new ContentValues(); values.put(Database.Catid, 107);values.put(Database.Catcategoria,7);db.insert(Database.Tabla_Categoria,null,values);
         //values.put();
-        Cursor cc = db.rawQuery("SELECT * FROM "+Database.Tabla_Categoria, null);
-        while(cc.moveToNext()) {
-            Log.i("INFORMACION", cc.getInt(0) + "----" + cc.getInt(1));
+        Cursor c = db.rawQuery("SELECT * FROM "+Database.Tabla_Palabra, null);
+        while (c.moveToNext()) {
+            Log.i("informacion", c.getInt(0)+"---" + c.getString(1));
         }
-        getCategoria(4);
-        db.endTransaction();
+        c.close();
         db.close();
 
     }
@@ -192,13 +190,15 @@ public class SingletonDB {
     }
 
     public boolean IsElementInside() {
-        SQLiteDatabase db = database.getReadableDatabase();
-        Cursor cc = db.rawQuery("SELECT " + Database.Palid + " FROM " + Database.Tabla_Palabra, null);
-        if(cc.getCount() > 1){
+        SQLiteDatabase db = database.getWritableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM "+Database.Tabla_Palabra, null);
+        while (c.moveToNext()) {
+            Log.i("informacion", c.getInt(0)+"---" + c.getString(1));
+            c.close();
             db.close();
             return true;
         }
-
+        c.close();
         db.close();
         return false;
     }
@@ -206,20 +206,27 @@ public class SingletonDB {
     public Integer getCategoria (int id){
         SQLiteDatabase db = database.getWritableDatabase();
         Cursor cc = db.rawQuery("SELECT " + Database.Catcategoria + " FROM " + Database.Tabla_Categoria + " WHERE " + Database.Catid +"="+id,null );
-        return cc.getInt(0);
+        cc.moveToNext();
+        int cc1 = cc.getInt(0);
+        cc.close();
+        return cc1;
     }
 
     public String [] getSym (int id){
         SQLiteDatabase db = database.getReadableDatabase();
         Cursor cc = db.rawQuery("SELECT " + Database.SinIDS + " FROM " + Database.Tabla_Sinonimo + " WHERE " + Database.Sindidpalabra +"="+id,null);
+        cc.moveToNext();
         String Sym []= cc.getString(cc.getColumnIndex(Database.SinIDS)).split(",");
+        cc.close();
         return Sym;
     }
 
     public String [] getAnt (int id){
         SQLiteDatabase db = database.getReadableDatabase();
         Cursor cc = db.rawQuery("SELECT " + Database.AntIDs + " FROM " + Database.Tabla_Antonimo + " WHERE " + Database.Antidpalabra +"="+id,null);
+        cc.moveToNext();
         String Sym []= cc.getString(cc.getColumnIndex(Database.AntIDs)).split(",");
+        cc.close();
         return Sym;
     }
 
@@ -228,6 +235,7 @@ public class SingletonDB {
     {
         SQLiteDatabase db = database.getReadableDatabase();
         Cursor cc = db.rawQuery("SELECT " + Database.Palpalabra + "," + Database.Palid + " FROM " + Database.Tabla_Palabra + " NATURAL JOIN " + Database.Tabla_Categoria + " WHERE " + Database.Catcategoria + "=" + categoria + " AND " + Database.Palid + "=" + Database.Catid, null);
+        cc.moveToNext();
         int j = 0;
         ArrayList<Integer> valores = new ArrayList<>();
         String [] resultado = new String[count];
@@ -241,6 +249,7 @@ public class SingletonDB {
             resultado[j] = cc.getInt(0) + "," + cc.getString(1);
             j++;
         }
+        cc.close();
         return resultado;
     }
 

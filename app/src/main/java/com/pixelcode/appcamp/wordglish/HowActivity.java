@@ -42,7 +42,7 @@ public class HowActivity extends Activity {
             @Override
             public View makeView() {
                 ImageView myView = new ImageView(c);
-                myView.setScaleType(ImageView.ScaleType.FIT_XY);
+                myView.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 myView.setLayoutParams(new ImageSwitcher.LayoutParams(ImageSwitcher.LayoutParams.
                         MATCH_PARENT, ImageSwitcher.LayoutParams.MATCH_PARENT));
                 return myView;
@@ -51,6 +51,7 @@ public class HowActivity extends Activity {
         });
         imageSwitcher.getInAnimation().setDuration(1000);
         imageSwitcher.getOutAnimation().setDuration(1000);
+        imageSwitcher.setImageResource(R.drawable.how_01);
         vistas = new View[4];
         for (int i = 0; i < 4; i++) {
             vistas[i] = grid.getChildAt(i);

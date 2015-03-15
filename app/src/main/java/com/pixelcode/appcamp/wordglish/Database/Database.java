@@ -11,7 +11,6 @@ import android.util.Log;
 public class Database extends SQLiteOpenHelper {
      private static final String BDname = "WordDataBase";
      private static final int Verison = 1;
-     private SQLiteDatabase db;
     public static final String TAG = Database.class.getSimpleName();
 
     //Table Palabra
