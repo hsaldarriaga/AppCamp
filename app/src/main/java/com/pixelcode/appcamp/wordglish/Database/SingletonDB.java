@@ -38,6 +38,7 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Palid, 3);values.put(Database.Palpalabra,"Vessel");db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 4);values.put(Database.Palpalabra,"Grit");db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 5);values.put(Database.Palpalabra,"SalesClerk");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid, 100);values.put(Database.Palpalabra,"Heel");db.insert(Database.Tabla_Palabra,null,values);
 
         //Desierto
         values = new ContentValues(); values.put(Database.Palid, 6);values.put(Database.Palpalabra,"Serpent");db.insert(Database.Tabla_Palabra,null,values);
@@ -45,6 +46,7 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Palid, 8);values.put(Database.Palpalabra,"Palm");db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 9);values.put(Database.Palpalabra,"Camel");db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 10);values.put(Database.Palpalabra,"Overcast");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid, 101);values.put(Database.Palpalabra,"Aqua");db.insert(Database.Tabla_Palabra,null,values);
 
         //Montaña
         values = new ContentValues(); values.put(Database.Palid, 11);values.put(Database.Palpalabra,"Overcoat");db.insert(Database.Tabla_Palabra,null,values);
@@ -52,6 +54,7 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Palid, 13);values.put(Database.Palpalabra,"Cable Railway");db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 14);values.put(Database.Palpalabra,"Landslide");db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 15);values.put(Database.Palpalabra,"Skier");db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid, 102);values.put(Database.Palpalabra,"Couch");db.insert(Database.Tabla_Palabra,null,values);
 
         //Bosques
         values = new ContentValues(); values.put(Database.Palid, 16); values.put(Database.Palpalabra,"Leafs"); db.insert(Database.Tabla_Palabra,null,values);
@@ -59,18 +62,23 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Palid, 18); values.put(Database.Palpalabra,"Igniter"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 19); values.put(Database.Palpalabra,"Bruin"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 20); values.put(Database.Palpalabra,"Firewood"); db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid, 103);values.put(Database.Palpalabra,"Mainframe");db.insert(Database.Tabla_Palabra,null,values);
+
         //Ciudad
         values = new ContentValues(); values.put(Database.Palid, 21); values.put(Database.Palpalabra,"Skyscraper"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 22); values.put(Database.Palpalabra,"Eatery"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 23); values.put(Database.Palpalabra,"Highway"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 24); values.put(Database.Palpalabra,"Sewer"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 25); values.put(Database.Palpalabra,"Fuss"); db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid, 104);values.put(Database.Palpalabra,"Grange");db.insert(Database.Tabla_Palabra,null,values);
+
         //Parque de Diversiones
         values = new ContentValues(); values.put(Database.Palid, 26); values.put(Database.Palpalabra,"Scenic Railway"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 27); values.put(Database.Palpalabra,"Beverages"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 28); values.put(Database.Palpalabra,"Candyfloss"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 29); values.put(Database.Palpalabra,"Target Shooting"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 30); values.put(Database.Palpalabra,"Toffee"); db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid, 105);values.put(Database.Palpalabra,"Burial Ground");db.insert(Database.Tabla_Palabra,null,values);
 
         //Zoologico
         values = new ContentValues(); values.put(Database.Palid, 31); values.put(Database.Palpalabra,"Breeder"); db.insert(Database.Tabla_Palabra,null,values);
@@ -78,6 +86,7 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Palid, 33); values.put(Database.Palpalabra,"Placard"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 34); values.put(Database.Palpalabra,"Grade"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 35); values.put(Database.Palpalabra,"Dweller"); db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid, 106);values.put(Database.Palpalabra,"Shooter");db.insert(Database.Tabla_Palabra,null,values);
 
         //Nocturno
 
@@ -86,6 +95,7 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Palid, 38); values.put(Database.Palpalabra,"Crossbar"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 39); values.put(Database.Palpalabra,"Refreshment"); db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 40); values.put(Database.Palpalabra,"Feast"); db.insert(Database.Tabla_Palabra,null,values);
+        values = new ContentValues(); values.put(Database.Palid, 107);values.put(Database.Palpalabra,"Church");db.insert(Database.Tabla_Palabra,null,values);
 
 
         //Adjetivos
@@ -99,7 +109,56 @@ public class SingletonDB {
         AdjetivePut(66,67,68,69,70,13,14,"Hangover","Drunkenness","Headache","Sobriety","Awesome");
         AdjetivePut(71,72,73,74,75,1,2,"Good","Worthy","Nice","Poor","Worthless");
 
+        //Categorias
 
+        values = new ContentValues(); values.put(Database.Catid, 1);values.put(Database.Catcategoria,"0");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 2);values.put(Database.Catcategoria,"0");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 3);values.put(Database.Catcategoria,"0");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 4);values.put(Database.Catcategoria,"0");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 5);values.put(Database.Catcategoria,"0");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 100);values.put(Database.Catcategoria,"0");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 6);values.put(Database.Catcategoria,"1");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 7);values.put(Database.Catcategoria,"1");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 8);values.put(Database.Catcategoria,"1");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 9);values.put(Database.Catcategoria,"1");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 10);values.put(Database.Catcategoria,"1");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 101);values.put(Database.Catcategoria,"1");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 11);values.put(Database.Catcategoria,"2");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 12);values.put(Database.Catcategoria,"2");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 13);values.put(Database.Catcategoria,"2");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 14);values.put(Database.Catcategoria,"2");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 15);values.put(Database.Catcategoria,"2");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 102);values.put(Database.Catcategoria,"2");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 16);values.put(Database.Catcategoria,"3");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 17);values.put(Database.Catcategoria,"3");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 18);values.put(Database.Catcategoria,"3");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 19);values.put(Database.Catcategoria,"3");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 20);values.put(Database.Catcategoria,"3");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 103);values.put(Database.Catcategoria,"3");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 21);values.put(Database.Catcategoria,"4");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 22);values.put(Database.Catcategoria,"4");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 23);values.put(Database.Catcategoria,"4");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 24);values.put(Database.Catcategoria,"4");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 25);values.put(Database.Catcategoria,"4");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 104);values.put(Database.Catcategoria,"4");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 26);values.put(Database.Catcategoria,"5");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 27);values.put(Database.Catcategoria,"5");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 28);values.put(Database.Catcategoria,"5");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 29);values.put(Database.Catcategoria,"5");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 30);values.put(Database.Catcategoria,"5");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 105);values.put(Database.Catcategoria,"5");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 31);values.put(Database.Catcategoria,"6");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 32);values.put(Database.Catcategoria,"6");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 33);values.put(Database.Catcategoria,"6");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 34);values.put(Database.Catcategoria,"6");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 35);values.put(Database.Catcategoria,"6");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 106);values.put(Database.Catcategoria,"6");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 36);values.put(Database.Catcategoria,"7");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 37);values.put(Database.Catcategoria,"7");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 38);values.put(Database.Catcategoria,"7");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 39);values.put(Database.Catcategoria,"7");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 40);values.put(Database.Catcategoria,"7");db.insert(Database.Tabla_Categoria,null,values);
+        values = new ContentValues(); values.put(Database.Catid, 107);values.put(Database.Catcategoria,"7");db.insert(Database.Tabla_Categoria,null,values);
         //values.put();
 
         db.close();
@@ -124,6 +183,36 @@ public class SingletonDB {
         if(cc.getCount() > 1){
             return true;
         }
+
+
         return false;
     }
+
+    public Integer getCategoria (int id){
+        SQLiteDatabase db = database.getReadableDatabase();
+        Cursor cc = db.rawQuery("SELECT " + Database.Catcategoria + " FROM " + Database.Tabla_Categoria + " WHERE " + Database.Catid +"="+id,null );
+        Integer IdCa = cc.getInt(cc.getColumnIndex(Database.Catcategoria));
+        return IdCa;
+    }
+
+    public String [] getSym (int id){
+        SQLiteDatabase db = database.getReadableDatabase();
+        Cursor cc = db.rawQuery("SELECT " + Database.SinIDS + " FROM " + Database.Tabla_Sinonimo + " WHERE " + Database.Sindidpalabra +"="+id,null);
+        String Sym []= cc.getString(cc.getColumnIndex(Database.SinIDS)).split(",");
+        return Sym;
+    }
+
+    public String [] getAnt (int id){
+        SQLiteDatabase db = database.getReadableDatabase();
+        Cursor cc = db.rawQuery("SELECT " + Database.AntIDs + " FROM " + Database.Tabla_Antonimo + " WHERE " + Database.Antidpalabra +"="+id,null);
+        String Sym []= cc.getString(cc.getColumnIndex(Database.AntIDs)).split(",");
+        return Sym;
+    }
+
+
+
+
+
+
+
 }

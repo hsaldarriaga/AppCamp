@@ -44,19 +44,19 @@ public class Database extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String CREATE_TABLE = "CREATE TABLE " + Tabla_Palabra + "("
+        String CREATE_TABLE = " CREATE TABLE " + Tabla_Palabra + "("
                               + Palid + " integer primary key," + Palpalabra + " text"+
-                                ");" +
-                                "CREATE TABLE " + Tabla_Sinonimo + "("
+                                ")" +
+                                " CREATE TABLE " + Tabla_Sinonimo + "("
                                 + Sindid + " integer primary key," + Sindidpalabra + " integer,"
-                                + SinIDS + " integer"+
-                                 ");"+
-                                "CREATE TABLE " + Tabla_Antonimo + "("
+                                + SinIDS + " text"+
+                                 ")"+
+                                " CREATE TABLE " + Tabla_Antonimo + "("
                                 + Antid + " integer primary key," + Antidpalabra + " integer,"
-                                + AntIDs + " integer"+
-                                   ");" +
-                                "CREATE TABLE " + Tabla_Categoria + "("
-                                 + Catid + " integer primary key increment," + Catcategoria + " integer,"+
+                                + AntIDs + " text"+
+                                   ")" +
+                                " CREATE TABLE " + Tabla_Categoria + "("
+                                 + Catid + " integer primary key," + Catcategoria + " integer"+
                                     ");";
         Log.d(TAG,"onCreate" + CREATE_TABLE);
 
