@@ -166,12 +166,6 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Catid, 39);values.put(Database.Catcategoria,7);db.insert(Database.Tabla_Categoria,null,values);
         values = new ContentValues(); values.put(Database.Catid, 40);values.put(Database.Catcategoria,7);db.insert(Database.Tabla_Categoria,null,values);
         values = new ContentValues(); values.put(Database.Catid, 107);values.put(Database.Catcategoria,7);db.insert(Database.Tabla_Categoria,null,values);
-        //values.put();
-        Cursor c = db.rawQuery("SELECT * FROM "+Database.Tabla_Palabra, null);
-        while (c.moveToNext()) {
-            Log.i("informacion", c.getInt(0)+"---" + c.getString(1));
-        }
-        c.close();
         db.close();
 
     }
@@ -193,7 +187,6 @@ public class SingletonDB {
         SQLiteDatabase db = database.getWritableDatabase();
         Cursor c = db.rawQuery("SELECT * FROM "+Database.Tabla_Palabra, null);
         while (c.moveToNext()) {
-            Log.i("informacion", c.getInt(0)+"---" + c.getString(1));
             c.close();
             db.close();
             return true;
