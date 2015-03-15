@@ -1,5 +1,7 @@
 package com.pixelcode.appcamp.wordglish;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -23,7 +25,7 @@ public class HowActivity extends Activity {
     private View vistas[];
     private GridLayout grid;
     private float x_inicial = 0;
-    private Drawable drawables[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +49,6 @@ public class HowActivity extends Activity {
             }
 
         });
-        drawables = new Drawable[4];
-        drawables[0] = getResources().getDrawable(R.drawable.how_01);
-        drawables[1] = getResources().getDrawable(R.drawable.how_02);
-        drawables[2] = getResources().getDrawable(R.drawable.how_03);
-        drawables[3] = getResources().getDrawable(R.drawable.how_04);
-        imageSwitcher.setImageDrawable(drawables[0]);
         imageSwitcher.getInAnimation().setDuration(1000);
         imageSwitcher.getOutAnimation().setDuration(1000);
         vistas = new View[4];
@@ -93,24 +89,90 @@ public class HowActivity extends Activity {
     }
 
     public void next(View view){
+        int before = index;
         index+=1;
-        SetImage(index);
+        SetImage(before, index);
         SetPositionCircle();
     }
     public void previous(View view){
+        int before = index;
         index-=1;
-        SetImage(index);
+        SetImage(before, index);
         SetPositionCircle();
     }
 
-    private void SetImage(int index)
+    private void SetImage(int before, int index)
     {
-
+        final View v = (View) findViewById(R.id.how_relative);
+        Integer colorFrom, colorTo;
+        ValueAnimator colorAnimation;
         switch (index) {
-            case 0: imageSwitcher.setImageDrawable(drawables[0]); break;
-            case 1: imageSwitcher.setImageDrawable(drawables[1]); break;
-            case 2: imageSwitcher.setImageDrawable(drawables[2]); break;
-            case 3: imageSwitcher.setImageDrawable(drawables[3]); break;
+            case 0: imageSwitcher.setImageResource(R.drawable.how_01);
+                colorFrom = getResources().getColor(R.color.red);
+                colorTo = getResources().getColor(R.color.blue);
+                colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+                colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animator) {
+                        v.setBackgroundColor((Integer)animator.getAnimatedValue());
+                    }
+
+                });
+                colorAnimation.start();
+                break;
+            case 1: imageSwitcher.setImageResource(R.drawable.how_02);
+                if (before > index) {
+                    colorFrom = getResources().getColor(R.color.green);
+                    colorTo = getResources().getColor(R.color.red);
+                } else {
+                    colorFrom = getResources().getColor(R.color.blue);
+                    colorTo = getResources().getColor(R.color.red);
+                }
+                colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+                colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animator) {
+                        v.setBackgroundColor((Integer)animator.getAnimatedValue());
+                    }
+
+                });
+                colorAnimation.start();
+                break;
+            case 2: imageSwitcher.setImageResource(R.drawable.how_03);
+                if (before > index) {
+                    colorFrom = getResources().getColor(R.color.orange);
+                    colorTo = getResources().getColor(R.color.green);
+                } else {
+                    colorFrom = getResources().getColor(R.color.red);
+                    colorTo = getResources().getColor(R.color.green);
+                }
+                colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+                colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animator) {
+                        v.setBackgroundColor((Integer)animator.getAnimatedValue());
+                    }
+
+                });
+                colorAnimation.start();
+                break;
+            case 3: imageSwitcher.setImageResource(R.drawable.how_04);
+                colorFrom = getResources().getColor(R.color.green);
+                colorTo = getResources().getColor(R.color.orange);
+                colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), colorFrom, colorTo);
+                colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animator) {
+                        v.setBackgroundColor((Integer)animator.getAnimatedValue());
+                    }
+
+                });
+                colorAnimation.start();
+                break;
         }
     }
 

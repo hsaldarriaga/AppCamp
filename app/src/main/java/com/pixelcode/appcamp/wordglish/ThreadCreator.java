@@ -23,9 +23,9 @@ public class ThreadCreator implements Runnable{
         //Invocar Base de Datos
         long t1 =System.currentTimeMillis();
         SingletonDB db = SingletonDB.getInstance(activity);
-        if (db.IsElementInside()) {
-            db.Rellenar();
-        }
+        //if (db.IsElementInside()) {
+            //db.Rellenar();
+        //}
         //final
         t1 = Math.abs(t1 - System.currentTimeMillis());
         if (t1 < 3000) {

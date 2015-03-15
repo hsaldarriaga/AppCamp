@@ -2,14 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#2686BC"
+    android:id="@+id/how_relative">
 
-    <ImageSwitcher
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/how_ImageSwitcher"
-        android:inAnimation="@android:anim/slide_in_left"
-        android:outAnimation="@android:anim/slide_out_right" />
+        android:layout_above="@+id/how_imageView">
+
+        <ImageSwitcher
+            android:layout_width="fill_parent"
+            android:layout_height="280dp"
+            android:id="@+id/how_ImageSwitcher"
+            android:inAnimation="@android:anim/slide_in_left"
+            android:outAnimation="@android:anim/slide_out_right"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp" />
+    </RelativeLayout>
 
     <LinearLayout
         android:orientation="horizontal"

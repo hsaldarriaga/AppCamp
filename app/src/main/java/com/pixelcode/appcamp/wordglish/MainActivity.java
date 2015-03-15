@@ -16,8 +16,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         fragmentManager = getFragmentManager();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Main_frag_presentation pres = new Main_frag_presentation();
         fragmentTransaction.add(R.id.main_container, pres);

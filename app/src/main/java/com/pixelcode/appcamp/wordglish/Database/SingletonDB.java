@@ -31,7 +31,7 @@ public class SingletonDB {
     public void Rellenar()
     {
          db = database.getWritableDatabase();
-
+        db.beginTransaction();
         //Playa
         ContentValues values = new ContentValues(); values.put(Database.Palid,1);values.put(Database.Palpalabra,"Umbrella");db.insert(Database.Tabla_Palabra,null,values);
         values = new ContentValues(); values.put(Database.Palid, 2);values.put(Database.Palpalabra,"Fish");db.insert(Database.Tabla_Palabra,null,values);
@@ -160,7 +160,7 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Catid, 40);values.put(Database.Catcategoria,"7");db.insert(Database.Tabla_Categoria,null,values);
         values = new ContentValues(); values.put(Database.Catid, 107);values.put(Database.Catcategoria,"7");db.insert(Database.Tabla_Categoria,null,values);
         //values.put();
-
+        db.endTransaction();
         db.close();
     }
 
@@ -184,7 +184,7 @@ public class SingletonDB {
             return true;
         }
 
-
+        db.close();
         return false;
     }
 
