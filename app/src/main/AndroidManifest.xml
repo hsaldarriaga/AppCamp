@@ -24,6 +24,9 @@
             android:name=".RelationActivity"
             android:label="@string/title_activity_relation" >
         </activity>
+        <activity
+            android:name=".HowActivity" >
+        </activity>
     </application>
 
 </manifest>

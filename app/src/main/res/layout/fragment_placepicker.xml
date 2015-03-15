@@ -9,6 +9,5 @@
         android:text="Place Picker"
         android:id="@+id/textView"
         android:clickable="true"
-        android:onClick="Next_click"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

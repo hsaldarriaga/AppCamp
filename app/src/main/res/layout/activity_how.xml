@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageSwitcher
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/how_ImageSwitcher"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right"
+        android:animateFirstView="false"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:id="@+id/how_controls"
+        android:layout_marginBottom="100dp">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/how_grid">
+
+            <View
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/circle_full"
+                android:layout_column="0" />
+
+            <View
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/circle_empty"
+                android:layout_column="1" />
+
+            <View
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/circle_empty"
+                android:layout_column="2" />
+
+            <View
+                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/circle_empty"
+                android:layout_column="3" />
+        </GridLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:id="@+id/how_imageView"
+        android:layout_above="@+id/how_controls"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/how_button"
+        android:layout_marginBottom="40dp"
+        android:contentDescription="Back to Menu" />
+
+</RelativeLayout>
