@@ -23,11 +23,11 @@ public class ThreadCreator implements Runnable{
         //Invocar Base de Datos
         long t1 =System.currentTimeMillis();
         SingletonDB db = SingletonDB.getInstance(activity);
-        //if (db.IsElementInside()) {
-            //db.Rellenar();
-        //}
-        //final
-        t1 = Math.abs(t1 - System.currentTimeMillis());
+        if (!db.IsElementInside()) {
+            db.Rellenar();
+       }
+
+       t1 = Math.abs(t1 - System.currentTimeMillis());
         if (t1 < 3000) {
             try {
                 Thread.sleep(3000 - t1);
