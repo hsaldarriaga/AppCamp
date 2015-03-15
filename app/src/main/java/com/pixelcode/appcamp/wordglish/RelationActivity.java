@@ -15,7 +15,7 @@ import java.util.Random;
 
 public class RelationActivity extends Activity{
 
-    public enum CATEGORIAS {PLAYA, DESIERTO, MONTAÑA, BOSQUE, CIUDAD, PARQUE_DE_DIVERSIONES, ZOOLOGICO, NOCTURNO};
+    public enum CATEGORIAS {PLAYA, DESIERTO, MONTAÑA, BOSQUE, CIUDAD, PARQUE_DE_DIVERSIONES, ZOOLOGICO, NOCTURNO, NIEVE};
     private ListView lista;
     private CATEGORIAS cat;
     private int bt_normal, background;
@@ -26,8 +26,8 @@ public class RelationActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        progress = (ProgressBar) findViewById(R.id.timebar);
         setContentView(R.layout.activity_relation);
+        progress = (ProgressBar) findViewById(R.id.rel_progress);
         Bundle b = getIntent().getExtras();
         cat =  CATEGORIAS.values()[b.getInt("categoria")]; //Obtengo las categoria a trabaja
         getResources(cat); //Establezco los estilos

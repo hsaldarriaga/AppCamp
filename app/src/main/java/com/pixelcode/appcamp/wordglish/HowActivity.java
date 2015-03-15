@@ -42,7 +42,7 @@ public class HowActivity extends Activity {
             @Override
             public View makeView() {
                 ImageView myView = new ImageView(c);
-                myView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                myView.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 myView.setLayoutParams(new ImageSwitcher.LayoutParams(ImageSwitcher.LayoutParams.
                         MATCH_PARENT, ImageSwitcher.LayoutParams.MATCH_PARENT));
                 return myView;

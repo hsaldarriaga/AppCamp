@@ -16,12 +16,16 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imageButton3"
+            android:onClick="StartGame"
+            android:tag="0"
             android:background="@drawable/place1" />
 
         <ImageButton
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imageButton11"
+            android:onClick="StartGame"
+            android:tag="1"
             android:layout_gravity="center_vertical"
             android:background="@drawable/place4"/>
 
@@ -29,12 +33,16 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imageButton13"
+            android:onClick="StartGame"
+            android:tag="8"
             android:background="@drawable/place5"/>
 
         <ImageButton
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imageButton15"
+            android:onClick="StartGame"
+            android:tag="5"
             android:background="@drawable/place7"/>
 
     </LinearLayout>
@@ -50,6 +58,8 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imageButton10"
+            android:onClick="StartGame"
+            android:tag="6"
             android:background="@drawable/place2"
             android:layout_marginTop="80dp" />
 
@@ -57,6 +67,8 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imageButton12"
+            android:onClick="StartGame"
+            android:tag="3"
             android:layout_gravity="center_vertical"
             android:background="@drawable/place3"/>
 
@@ -64,12 +76,16 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imageButton14"
+            android:onClick="StartGame"
+            android:tag="7"
             android:background="@drawable/place6"/>
 
         <ImageButton
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:id="@+id/imageButton16"
+            android:onClick="StartGame"
+            android:tag="4"
             android:background="@drawable/place8"/>
 
     </LinearLayout>

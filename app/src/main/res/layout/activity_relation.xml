@@ -27,7 +27,7 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:id="@+id/timebar"
+            android:id="@+id/rel_progress"
             android:layout_weight="6" />
 
         <ImageButton
