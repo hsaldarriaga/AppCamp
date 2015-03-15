@@ -91,7 +91,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/how_ID"
+        android:background="@drawable/how_id"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="10dp" />
 

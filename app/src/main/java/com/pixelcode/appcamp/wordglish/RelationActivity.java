@@ -20,7 +20,7 @@ public class RelationActivity extends Activity{
         Bundle b = getIntent().getExtras();
         cat =  CATEGORIAS.values()[b.getInt("categoria")];
         SingletonDB db = SingletonDB.getInstance();
-        Cursor cc = db.getWordsFromCategory(cat.ordinal(), 4);
+        //Cursor cc = db.getWordsFromCategory(cat.ordinal(), 4);
 
     }
 }

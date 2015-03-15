@@ -33,7 +33,7 @@ public class Database extends SQLiteOpenHelper {
 
     //Tabla Categoria
     public static final String Tabla_Categoria = "Categoria";
-    public static final String Catid = "IdCategoria";
+    public static final String Catid = "idPalabra";
     public static final String Catcategoria = "Categorias";
 
     public Database(Context context) {

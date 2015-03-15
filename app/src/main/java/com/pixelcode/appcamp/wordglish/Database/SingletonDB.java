@@ -4,10 +4,12 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.pixelcode.appcamp.wordglish.RelationActivity;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by Ricardo on 14/03/2015.
@@ -166,6 +168,11 @@ public class SingletonDB {
         values = new ContentValues(); values.put(Database.Catid, 40);values.put(Database.Catcategoria,7);db.insert(Database.Tabla_Categoria,null,values);
         values = new ContentValues(); values.put(Database.Catid, 107);values.put(Database.Catcategoria,7);db.insert(Database.Tabla_Categoria,null,values);
         //values.put();
+        Cursor cc = db.rawQuery("SELECT * FROM "+Database.Tabla_Categoria, null);
+        while(cc.moveToNext()) {
+            Log.i("INFORMACION", cc.getInt(0) + "----" + cc.getInt(1));
+        }
+        getCategoria(4);
         db.endTransaction();
         db.close();
 
@@ -199,14 +206,7 @@ public class SingletonDB {
     public Integer getCategoria (int id){
         SQLiteDatabase db = database.getWritableDatabase();
         Cursor cc = db.rawQuery("SELECT " + Database.Catcategoria + " FROM " + Database.Tabla_Categoria + " WHERE " + Database.Catid +"="+id,null );
-        Integer IdCa=0;// = cc.getInt(cc.getColumnIndex(Database.Catcategoria));
-
-        if (cc.moveToFirst()){
-
-
-        }
-
-        return IdCa;
+        return cc.getInt(0);
     }
 
     public String [] getSym (int id){
@@ -224,8 +224,30 @@ public class SingletonDB {
     }
 
 
-    public ArrayList<String> getWordsFromCategory(int categoria, int count)
+    public String [] getWordsFromCategory(int categoria, int count)
     {
-        return null;
+        SQLiteDatabase db = database.getReadableDatabase();
+        Cursor cc = db.rawQuery("SELECT " + Database.Palpalabra + "," + Database.Palid + " FROM " + Database.Tabla_Palabra + " NATURAL JOIN " + Database.Tabla_Categoria + " WHERE " + Database.Catcategoria + "=" + categoria + " AND " + Database.Palid + "=" + Database.Catid, null);
+        int j = 0;
+        ArrayList<Integer> valores = new ArrayList<>();
+        String [] resultado = new String[count];
+        Random m = new Random();
+        while (j<count) {
+            int value = m.nextInt(cc.getCount());
+            while (IsIn(value, valores)) {
+                m.nextInt(cc.getCount());
+            }
+            cc.move(value);
+            resultado[j] = cc.getInt(0) + "," + cc.getString(1);
+            j++;
+        }
+        return resultado;
+    }
+
+    private boolean IsIn(int value, ArrayList<Integer> array)
+    {
+        if (array.contains(value))
+            return true;
+        return false;
     }
 }
