@@ -2,9 +2,11 @@ package com.pixelcode.appcamp.wordglish;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.Interpolator;
 import android.widget.GridLayout;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
@@ -21,7 +23,7 @@ public class HowActivity extends Activity {
     private View vistas[];
     private GridLayout grid;
     private float x_inicial = 0;
-
+    private Drawable drawables[];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,14 +40,21 @@ public class HowActivity extends Activity {
             @Override
             public View makeView() {
                 ImageView myView = new ImageView(c);
-                myView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                myView.setScaleType(ImageView.ScaleType.FIT_XY);
                 myView.setLayoutParams(new ImageSwitcher.LayoutParams(ImageSwitcher.LayoutParams.
                         MATCH_PARENT, ImageSwitcher.LayoutParams.MATCH_PARENT));
                 return myView;
             }
 
         });
-        imageSwitcher.setImageResource(R.drawable.how_01);
+        drawables = new Drawable[4];
+        drawables[0] = getResources().getDrawable(R.drawable.how_01);
+        drawables[1] = getResources().getDrawable(R.drawable.how_02);
+        drawables[2] = getResources().getDrawable(R.drawable.how_03);
+        drawables[3] = getResources().getDrawable(R.drawable.how_04);
+        imageSwitcher.setImageDrawable(drawables[0]);
+        imageSwitcher.getInAnimation().setDuration(1000);
+        imageSwitcher.getOutAnimation().setDuration(1000);
         vistas = new View[4];
         for (int i = 0; i < 4; i++) {
             vistas[i] = grid.getChildAt(i);
@@ -98,10 +107,10 @@ public class HowActivity extends Activity {
     {
 
         switch (index) {
-            case '0': imageSwitcher.setImageResource(R.drawable.how_01); break;
-            case '1': imageSwitcher.setImageResource(R.drawable.how_02); break;
-            case '2': imageSwitcher.setImageResource(R.drawable.how_03); break;
-            case '3': imageSwitcher.setImageResource(R.drawable.how_04); break;
+            case 0: imageSwitcher.setImageDrawable(drawables[0]); break;
+            case 1: imageSwitcher.setImageDrawable(drawables[1]); break;
+            case 2: imageSwitcher.setImageDrawable(drawables[2]); break;
+            case 3: imageSwitcher.setImageDrawable(drawables[3]); break;
         }
     }
 
@@ -114,5 +123,9 @@ public class HowActivity extends Activity {
                 vistas[i].setBackgroundResource(R.drawable.circle_empty);
             }
         }
+    }
+
+    public void getBack(View v) {
+        this.finish();
     }
 }
