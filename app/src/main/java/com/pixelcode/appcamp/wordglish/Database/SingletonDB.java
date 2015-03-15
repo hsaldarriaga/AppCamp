@@ -5,6 +5,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.pixelcode.appcamp.wordglish.RelationActivity;
+
+import java.util.ArrayList;
+
 /**
  * Created by Ricardo on 14/03/2015.
  */
@@ -219,12 +223,9 @@ public class SingletonDB {
         return Sym;
     }
 
-    
 
-
-
-
-
-
-
+    public ArrayList<String> getWordsFromCategory(int categoria, int count)
+    {
+        return null;
+    }
 }
